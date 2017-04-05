@@ -1,41 +1,42 @@
 {
-  "name": "pesajs",
-  "version": "0.0.1",
-  "description": "M-Pesa API helper",
-  "homepage": "https://github.com/aksalj/pesajs",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/aksalj/pesajs"
+  "name" : "pesajs",
+  "version" : "0.0.1",
+  "description" : "M-Pesa API helper",
+  "homepage" : "https://github.com/aksalj/pesajs",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/aksalj/pesajs"
   },
-  "bugs": {
-    "url": "https://github.com/aksalj/pesajs/issues",
-    "email": "aksalj@aksalj.com"
+  "bugs" : {
+    "url" : "https://github.com/aksalj/pesajs/issues",
+    "email" : "aksalj@aksalj.com"
   },
-  "keywords": [
-    "mpesa",
-    "mobile money",
-    "safaricom"
-  ],
-  "author": "Salama AB <aksalj@aksalj.com>",
-  "license": "MIT",
-  "engineStrict": true,
-  "engines": {
-    "node": ">=4.4"
+  "keywords" : [ "mpesa", "mobile money", "safaricom" ],
+  "author" : {
+    "name" : "Salama AB",
+    "email" : "aksalj@aksalj.com",
+    "url" : "https://github.com/aksalj"
   },
-  "dependencies": {
-    "crypto-js": "^3.1.6",
-    "request": "^2.72.0",
-    "xml2json": "^0.9.1"
+  "license" : {
+    "type" : "mit"
   },
-  "main": "index.js",
-  "scripts": {
-    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
-    "example": "cd example && npm start"
+  "engineStrict" : true,
+  "engines" : {
+    "node" : ">=4.4"
   },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "istanbul": "^0.4.3",
-    "mocha": "^2.5.3",
-    "request-debug": "^0.2.0"
+  "dependencies" : {
+    "request" : "^2.72.0",
+    "xml2json" : "^0.9.1"
+  },
+  "main" : "./index.js",
+  "scripts" : {
+    "test" : "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
+    "example" : "cd example && npm start"
+  },
+  "devDependencies" : {
+    "chai" : "^3.5.0",
+    "istanbul" : "^0.4.3",
+    "mocha" : "^2.5.3",
+    "request-debug" : "^0.2.0"
   }
 }
