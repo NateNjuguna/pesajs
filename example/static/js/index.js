@@ -41,7 +41,8 @@
         if(action === "confirm") {
             formData = {
                 'transaction' : txn,
-                'mpesa_transaction': mpesa_txn
+                'mpesa_transaction': mpesa_txn,
+                'reference': $("#reference").val()
             };
 
         } else { // is request
