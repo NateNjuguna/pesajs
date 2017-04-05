@@ -1,6 +1,6 @@
 {
   "name" : "pesajs",
-  "version" : "0.0.1",
+  "version" : "0.0.2",
   "description" : "M-Pesa API helper",
   "homepage" : "https://github.com/aksalj/pesajs",
   "repository" : {
