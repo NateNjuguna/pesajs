@@ -15,8 +15,8 @@ $ npm install pesajs
 ```
 
 
-- **Online checkout (`Lipa Na M-Pesa`)**: According to Safaricom, this is a "*Web service for integrating the M-Pesa 
-Checkout API to a merchant site. The overall scope of this Web service is to provide primitives for application developers 
+- **Online checkout (`Lipa Na M-Pesa`)**: According to Safaricom, this is a "*Web service for integrating the M-Pesa
+Checkout API to a merchant site. The overall scope of this Web service is to provide primitives for application developers
 to handle checkout process in a simple way*."
 
 **Initiate `Lipa Na M-Pesa` online payment**
@@ -45,7 +45,7 @@ paymentService.requestPayment(requestData)
 
         // Now display M-Pesa message to user
         let msg = data.message;
-    
+
         // Keep mpesa transaction id somewhere, so you can use it to confirm transaction (next step).
         mpesa_txn = data.mpesa_txn
     })
@@ -59,7 +59,7 @@ paymentService.requestPayment(requestData)
 
 ```javascript
 let params = {
-    transaction: MY_TRANSACTION, 
+    transaction: MY_TRANSACTION,
     mpesa_txn: mpesa_txn
 };
 paymentService.confirmPayment(params)
@@ -76,11 +76,11 @@ paymentService.confirmPayment(params)
 
 ```javascript
 // Wait for payment notification (example using express)
-app.post("/ipn", paymentService.paymentNotification, function(req, res) {
-    
+app.post("/ipn", paymentService.paymentNotification(paymentService), function(req, res) {
+
     // Do whatever with payment info like confirm purchase, init shipping, send download link, etc.
     let paymentData = req.payment;
-   
+    res.send('ok'); // Required response
 });
 
 ```
