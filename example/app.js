@@ -28,6 +28,7 @@ const app = express();
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.raw({ type: '*/xml' }));
 app.use(express.static('static'));
 
 app.post('/checkout/:action(request|confirm)', function (req, res, next) {
@@ -92,7 +93,7 @@ app.post('/checkout/:action(request|confirm)', function (req, res, next) {
 
 });
 
-app.post("/ipn", paymentService.paymentNotification(paymentService)), function(req, res) {
+app.post("/ipn", paymentService.paymentNotification(paymentService), function(req, res) {
     // Do whatever with payment info like confirm purchase, init shipping, send download link, etc.
     let ipn = req.payment;
     console.log(ipn);
