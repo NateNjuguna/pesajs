@@ -60,6 +60,7 @@ paymentService.requestPayment(requestData)
 ```javascript
 let params = {
     transaction: MY_TRANSACTION,
+    ref: MY_REFERENCE,
     mpesa_txn: mpesa_txn
 };
 paymentService.confirmPayment(params)
